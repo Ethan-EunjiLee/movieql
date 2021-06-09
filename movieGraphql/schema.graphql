@@ -1,0 +1,17 @@
+type Query {
+    movies: [Movie]!
+    movie(id: Int): Movie!
+}
+
+type Movie {
+    id: Int!
+    name: String!
+    score: Int!
+}
+
+type Mutation {
+    addMovie(name: String!, score: Int!): Movie!
+    deleteMovie(id: Int!): Boolean!
+}
+# Mutation: 데이터베이스 상태가 변할 때 사용
+# 사용하고자 하는 Mutation은 type Mutation에 정의되어야 한다.

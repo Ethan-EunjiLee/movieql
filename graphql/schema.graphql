@@ -1,0 +1,22 @@
+type Query {
+    # []는 array 의미
+    people: [Person]!
+    # 특정 id값과 일치하는 Person 받아오기
+    person(id: Int): Person!
+}
+
+# 구 Nicolas
+type Person {
+    id: Int!
+    name: String!
+    age: Int!
+    gender: String!
+}
+
+# 타입 뒤의 !(느낌표)는 필수를 의미
+
+# 사용자가 Query에 name을 보내면 String을 보낸다.
+# name: String!
+
+# 사용자가 Query에 person을 보내면 Nicolas 객체를 보낸다.
+# person: Nicolas!
